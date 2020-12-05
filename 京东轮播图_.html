@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .wrapper{
+            width: 590px;
+            height: 470px;
+            position: relative;
+            margin: 100px auto;
+
+        }
+        .img-list div{
+            position: absolute;
+        }
+
+        .img-list div:nth-child(8){
+            z-index: 1;
+        }
+
+        .nav{
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            left:40px;
+        }
+        .nav a{
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color:rgba(255,255,255,.3);
+            margin: 0 2px;
+            border-radius: 50%;
+            border: 2px transparent solid;
+            background-clip: content-box;  
+        }
+
+        .nav a:hover{
+            background-color: white;
+            border: 2px rgba(255,255,255,.3) solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img-list">
+            <div>
+                <a href="#">
+                    <img src="./picture/1.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/2.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/3.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/4.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/5.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/6.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/7.jpg" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./picture/8.jpg" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="nav">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+</body>
+</html>

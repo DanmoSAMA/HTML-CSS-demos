@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尚硅谷学习测试_淡漠的Web前端之路--2</title>
+    <link rel="stylesheet" href="../html/css/reset.css">
+    <link rel="stylesheet" href="./css/reset.css"><!--去除浏览器默认样式-->
+    <style>
+        .box1
+                {
+                    width:300px;
+                    height: 300px;
+                    background-color: forestgreen;
+                    border: 10px solid #000;
+                }
+                /*
+                直接敲bd，发现快速生成边框三个样式的方法
+                但是这种简写好像不能指定每个边的情况
+                */
+        .box2
+                {
+                    width: 50%;
+                    height: 50%;
+                    background-color:orangered;
+                    border-color: #5489f1;
+                    border-width: 10px;
+                    border-style: solid;
+                /*这是完整三个样式的格式*/
+                
+                }
+                /*width和height，可以将属性值设置为相对于其父元素属性的百分比
+                好处：设置百分比可以使子元素跟随父元素的改变而改变*/
+
+        .box3
+                {
+                    width:10em;
+                    height:10em;
+                    background-color: orchid;
+                    border-color: orange;
+                    border-width: 10px 15px 20px 25px;
+                    border-style: solid dotted dashed double;
+                }
+                /*注意边框的几种属性值*/
+
+        .box4
+                {
+                    width: 10em;
+                    height: 10em;
+                    background-color: royalblue;
+                    font-size: 32px;
+                }
+                /*em:相对于元素的字体大小来计算，1em=1font-size，em会根据字体大小的改变而改变*/             
+
+        .box5
+                {
+                    width:10rem;
+                    height:10rem;
+                    background-color: #858580;
+                /*RGB（red,green,blue）每一种颜色的范围在0-255（0%-100%）之间
+                RGBA 第四个值表示不透明度，0表示完全透明，1表示完全不透明，.5半透明
+
+                十六进制的RGB值：
+                语法：“#红色绿色蓝色
+                颜色浓度的范围：00-ff
+                如果颜色两位两位重复可以简写   #aabbcc-->#abc
+
+                hsl值
+                h色相（0-360）本质是在色环上的度数
+                s饱和度，颜色的浓度0%-100%
+                l亮度，颜色的亮度0%-100%（一般标准颜色是50%）
+                若加a，意思依然是透明度*/
+                }
+        .outer
+                {
+                    background-color: #bbffaa;
+                }
+
+        .inner1
+                {
+                    width: 200px;
+                    background-color:orangered ;
+                    height: 200px;
+                    margin-bottom: 100px;
+                }
+        .inner2
+                {
+                    margin-left:auto;
+                    /*水平方向的布局：子元素属性必须满足
+                    margin-left+border-left+padding-left+width+padding-right+border-right+margin-right=其父元素内容区的宽度（必须满足）
+                    如果相加结果使等式不成立， 则称为过渡约束，等式自动调整
+                    如果这七个值没有为auto的情况，则浏览器会自动调整margin-right值以使等式满足
+                    有三个值可以设置为auto（auto在冒号后面，是属性值）：width  margin-left  margin-right（如果不设置子元素的width，它的默认值就是aoto）
+
+                    如果某个值设为auto，则会自动调整为auto的那个值以使等式成立
+
+                    如果将一个宽度和一个外边距设置为auto，则宽度会调整到最大，设置为auto的外边距会自动为0.
+                    如果将三个值都设置为auto，则外边距都是0，宽度最大。
+                    如果将两个外边距设置为auto，宽度固定值，则会将外边距设置为相同的值。（经常利用这个特点来使一个元素在其父元素水平居中）
+                    */
+                    background-color:orangered ;
+                    height: 200px;
+                    width:200px;
+                }
+                    /*这里是水平结构和垂直结构的演示*/ 
+        .inner3
+                {
+                    background-color: royalblue;
+                    height: 200px;
+                    width: 200px;
+                    margin-bottom: 100px;
+                }
+        .inner4
+                {
+                    background-color: royalblue;
+                    height: 200px;
+                    width: 200px;
+                    margin-left:auto;
+                    
+                }
+        .box6
+                {
+                    width: 200px;
+                    height: 200px;
+                    background-color: #bfa;
+                    overflow: hidden;
+                }
+        .box7
+                {
+                    width: 100px;
+                    height: 400px;
+                    background-color: orange;
+                    
+                }
+                /*溢出现象的展示*/
+        .box8
+                {
+                    width: 200px;
+                    height: 200px;
+                    background-color:#cfbdd6;
+                    overflow: auto;
+                    /*
+                    可以选的属性值：visible,hidden,auto,scroll
+                    scroll会生成两个方向的滚动条，而auto可能视情况只生成一个
+                    */
+                }
+                      
+        .box9
+                {
+                    width: 200px;
+                    height: 200px;
+                    background-color: orchid;
+                }
+
+        .box10
+                {
+                    width: 100px;
+                    height: 100px;
+                    background-color: sienna;
+                }
+                /*现在演示怎么把子元素放到左下角（暂时的做法）*/
+        .box11
+                {
+                    width: 200px;
+                    height: 100px;/*父元素改height*/
+                    background-color: orchid;
+                    padding-top: 100px;/*父元素加内边距*/
+                    /*（不能直接给子元素加外边距）*/
+                }
+
+        .box12
+                {
+                    width: 100px;
+                    height: 100px;
+                    background-color: sienna;
+                   
+                }
+    </style>
+</head>
+<body>
+    <div class="box1">
+            <div class="box2">
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="box3"></div>
+        <br><br>
+
+        <div class="box4"></div>
+        <br><br>
+        <div class="box5"></div>
+
+        <br><br>
+        <div class="outer">
+            <div class="inner1"> </div>
+            <div class="inner2"></div>
+            <div class="inner3"></div>
+            <div class="inner4"></div>
+        </div>
+
+         <br><br>
+      <div class="box6">
+          <div class="box7"></div>
+      </div>
+
+      <br><br>
+      <div class="box8">
+        逆转裁判系列（日版名：逆転裁判，英文版名：Ace Attorney）是卡普空制作的法庭战斗冒险游戏，游戏中玩家扮演辩护律师，通过侦查收集证据，然后在假想规则的日本法庭上质疑检察官和证人的证词来为嫌疑人获得“无罪”的判决作为胜利目的。
+        <br>
+        《逆转检事》是逆转裁判的衍生系列，在《逆转裁判》中的主要对手检察官御剑怜侍作为主角活跃在《逆转检事》的故事之中。和《逆转裁判》不同的是，由于没有法庭部分，调查阶段与论争阶段在同一场景轮流进行，而论争对手则是其他检察官、法官或案件的目击者等。
+
+      </div>
+      <br><br>
+
+      <div class="box9">
+          <div class="box10"></div>
+      </div>
+      <br><br>
+
+      <div class="box11">
+          <div class="box12"></div>
+      </div>
+
+      
+</body>
+</html>

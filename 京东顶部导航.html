@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东顶部导航</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.10.2-web/css/all.css">
+    <style>
+        body{
+            font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+        a,span,i{
+            color: #999;
+            text-decoration: none;
+        }
+        .wrapper{
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            background-color: #E3E4E5;
+            border-bottom: 1px #ddd solid
+        }
+        .content{
+            width: 1190px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .location{
+            float: left;
+        }
+        .city{
+            padding:0px 6px 0 10px;
+            border: 1px solid transparent;
+            /*如果不先设置一个透明边框，鼠标移入后字会动*/
+            position: relative;
+            /*不太能理解此处为什么开relative*/
+            z-index: 9999;
+            /*设置z-index用于遮掉中间线*/
+        }
+        .location:hover .city{
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            border-bottom: none;
+            /*下方边框不能显示，否则有线*/
+            padding-bottom: 1px;
+            /*靠下方内边距的白色部分来遮住线，注意不能是margin*/
+            
+        }
+        .city-list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204, 204, 204);
+            position: absolute;
+            top:31px;
+            z-index: 999;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2)
+        }
+        .location:hover .city-list{
+            display: block;
+        }
+        .nav{
+            float: right;
+        }
+        .nav div{
+            float: left;
+        }
+        .nav .line{
+            height: 10px;
+            width: 1px;
+            background-color: rgb(204, 202, 202);
+            display: inline-block;
+            margin: 10px 12px;
+        }
+        .em{
+            color:#f10215;
+        }
+        .location .fas{
+            color:#f10215;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="location">
+                <div class="city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#">
+                        北京
+                    </a>
+                </div>
+                <div class="city-list">
+
+                </div>
+            </div>
+
+            <div class="nav">
+                <div>
+                    <a href="#">您好，请登录</a>
+                    <a href="#"class="em">免费注册</a>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <a href="#">我的订单</a>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <a href="#">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <a href="#">京东会员</a>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <a href="#"class="em">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <span>
+                        客户服务
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <span>
+                        网站导航
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <span>
+                        手机京东
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影卡片练习</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.10.2-web/css/all.css">
+    <style>
+        .outer{
+           width: 240px;
+           margin: 100px auto; 
+           box-shadow: 0px 2px 10px rgba(0, 0, 0, .3);
+        }
+        .img-wrapper{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .info{
+            padding: 0 18px;
+        }
+        .category .fas{
+            margin-right: 8px;
+        } 
+        .title{
+            font-size: 18px;
+            color: #7E817E;
+            margin: 12px 0 14px 0;
+        }
+        .category{
+            font-size: 14px;
+            margin: 0 0 18px 4px;
+        }
+        .intro{
+            font-size: 14px;
+            margin: 0 0 38px 4px;
+            height:20px;
+            line-height:20px;
+        }
+        .category,.intro{
+            color:#ACAAAA;
+        }
+        .star-wrapper{
+            border-top: #E9E9E9 1px solid;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 0 0 16px;
+            color: #ddd;
+        }
+        .star{
+            float: left;
+        }
+        .light{
+            color: #BACB39;
+        }
+        .weibo {
+           float: right;
+           margin-right: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="img-wrapper">
+            <img src="./picture/animation.png" alt="">
+        </div>
+        <div class="info">
+            <h2 class="title">
+                动画电影
+            </h2>
+            <h3 class="category">
+                <i class="fas fa-map-marker-alt"></i>动画
+            </h3>
+            <p class="intro">
+                这是一部迪士尼的动画电影，非常非常的好看
+            </p>
+        </div>
+
+        <ul class="star-wrapper">
+            <ul class="star">
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star "></li>
+            </ul>
+        
+        <ul class="weibo">
+        <li class="fab fa-weibo"></li>
+        </ul>
+        
+    </div>
+</body>
+</html>

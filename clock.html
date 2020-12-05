@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 6px;
+            height: 300px;
+            background-color: #f00;
+            margin: 100px auto;
+            animation: rotate 10s infinite linear;
+
+            transform-origin: 0 300px;
+            /*设置变形的原点，应该写在外部，不要写在关键帧内*/
+        }
+        @keyframes rotate{
+            from{
+                transform:rotateZ(0deg);
+            }
+
+            to{
+                transform:rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

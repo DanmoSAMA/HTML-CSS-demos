@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<!--声明是HTML文档，不需要结束标签-->
+    <html lang="zh">
+    <!--表示是中文网站，en表示英文网站，浏览器会提示“是否翻译”-->
+        <head>
+           
+            <meta charset="utm-8">
+            <!--可以通过meta标签来设置网页的字符集，避免乱码问题-->
+            <meta arthor="Danmo">
+            <meta name="keywords" content="逆转裁判，神千，神乃木庄龙">
+            <!--keywords表示网站关键字，content后是关键字的内容-->
+            <!--keywords指的是，在浏览器内输入某个词语，如果keywords里有这个词，可以检索到该网站-->
+            <meta name="description" content="这是一个关于逆转裁判的网站"> 
+            <!--description指的是，在浏览器搜索到某网站时，出现的描述文字-->
+            <!--
+            <meta http-equiv="refresh" content="3;url=https://www.bilibili.com/video/BV1XJ411X7Ud?p=15">
+            -->
+            <!--上面这行，可以将页面重定向到另一个网站，“3”表示3s后页面跳转-->
+            <title>尚硅谷学习测试_淡漠的Web前端之路--1</title>
+            <!--title的内容会作为搜索结果的超链接上的文字显示-->
+            
+           
+            <!--引入这个link，就会去除浏览器默认样式
+                <link rel="stylesheet" href="./css/reset.css"> -->
+            <!--引入CSS的方法二——内部样式表（也不是很推荐使用）-->
+            <style>
+                /*html
+                {
+                    font-size: 30px;
+                }
+                用这种方法可以修改根元素的字体大小，从而影响rem
+                */
+
+
+                #p1{
+                    color:green;
+                    font-size:18px;
+                }
+                /*
+                如果p1前无#号，就是普通的元素选择器。
+                id选择器：在p后加入id属性，css中在选择器前加#号。注意，id不要重复
+                */
+                .teal
+                {
+                    color:teal;
+                }
+
+                .bigfontsize
+                {
+                    font-size: 25px;
+                }
+                /*类选择器（class选择器）：在p后加入class属性，css中在选择器前加.号。类选择器可以重复。可以同时为一个元素添加多个class属性（两个class名之间用空格隔开即可）*/
+                
+                /*
+                通配选择器示例：
+                *{
+                    color:red;
+                }
+                会把全部元素都变成红色。
+                */
+
+                /*交集选择器。语法：选择器1选择器2选择器3...选择器n（连着写，如果有就必须以元素选择器开头）（有时候没必要多此一举）举例：div.red（div对应元素选择器，.red对应class选择器）*/
+                p.introduction{
+                    color:grey;
+                }
+
+                #test1,.test2{
+                    color: royalblue;
+                }
+
+                /*子元素选择器，选中指定父元素的指定子元素。用”>”连接。*/
+                .test3>span{
+                    color: seagreen;
+                }
+
+                .test3>span>span{
+                    color:skyblue;
+                }
+
+                /*
+                后代元素选择器：选中指定元素内的指定后代元素。用空格连接。
+                父子的要求比较严格。
+                */
+
+                .test4 span{
+                    color:slateblue;
+                }
+
+
+                /*兄弟元素选择器：选中同级别的下一个元素。用+连接*/
+                .test5+span{
+                    color:brown;
+                }
+
+                /*还可以选中同级别下边的所有元素。用~连接*/
+                .test6~span{
+                    color:chocolate;
+                }
+
+                /*
+                关于属性选择器：
+                属性选择器：
+                    语法：
+                        [属性名] 选择含有指定属性的元素
+                        [属性名=属性值]选择含有指定属性和属性值的元素
+                        [属性名^=属性值]选择属性值以指定值开头的元素
+                        [属性名$=属性值]选择属性值以指定值结尾的元素
+                        [属性名*=属性值]选择属性值中含有某值的元素的元素
+    
+                        例如：p[title^=abc]（元素选择器和属性选择器构成了复合选择器）
+                
+                */
+
+                /*伪类选择器，用下边的列表测试*/
+                ul>li>ul>li:nth-of-type(3)
+                {
+                    color:coral;
+                }
+                /*在li中选中第三个元素*/
+
+                .Ace>li:nth-child(2n+1)
+                /*
+                在所有类型元素中选中奇数的
+                由于第一个是span，不符合li，所以只有第三个变色
+                如果变成.Ace>li,span:nth-of-type(2n+1),经测试，伪类会失效，所有都会变色
+                */
+                {
+                    color:darkgoldenrod;
+                }
+
+                .href1:link
+                {
+                    color:red;
+                }
+
+                .href2:visited
+                {
+                    color:goldenrod
+                }
+
+                .test7::before
+                {
+                    content: '『';
+                    font-size: 40px;
+                    color:darkgoldenrod;
+                }
+
+                .test7::after
+                {
+                    content:'』';
+                    font-size: 40px;    
+                    color:darkgoldenrod;         
+                }
+                /*before和after必须结合content属性来使用，content是CSS内的元素
+                before和after里的内容，在复制的时候不会被选上，在开发中常用*/
+
+                .href3:hover
+                {
+                    color: red;
+                }
+
+                .href4:active
+                {
+                    color:darkturquoise;
+                }
+
+                
+            </style>
+
+
+            <link rel="stylesheet" href="./css/test_new.css">
+            <!--引入CSS的方法三——外部样式表（十分推荐，开发必备）-->
+        </head> 
+        <body>
+            <h1 style="text-align: center;">Web前端</h1>
+            <p title="林则徐的诗">林则徐说：“<font color=purple size=4>苟利国家生死以</font>，岂因祸福避趋之。”
+                <!--title：把鼠标光标放在文件上，可以看到title信息。-->
+            </p>
+            <p id="p1" title="逆转裁判介绍">
+                <em>逆转裁判系列</em>（日版名：逆転裁判，英文版名：Ace Attorney）是卡普空制作的法庭战斗冒险游戏，游戏中玩家扮演辩护律师，通过侦查收集证据，然后在假想规则的日本法庭上质疑检察官和证人的证词来为嫌疑人获得“无罪”的判决作为胜利目的。
+            </p>    
+            <!--em表示语气加重，不要在意斜体效果-->
+            <!--此处的p1对应head中的CSS内部样式表-->              
+            <p id="p2">    
+                <strong>《逆转检事》</strong>是逆转裁判的衍生系列，在《逆转裁判》中的主要对手检察官御剑怜侍作为主角活跃在《逆转检事》的故事之中。和《逆转裁判》不同的是，由于没有法庭部分，调查阶段与论争阶段在同一场景轮流进行，而论争对手则是其他检察官、法官或案件的目击者等。    
+            </p>
+            <!--strong表示强调，不要在意加粗效果-->
+            <!--这两个都是行内标签-->
+
+            <blockquote>
+                逆转裁判是卡普空公司于2001年至今在GBA、NDS以及3DS平台上推出的法庭辩论AVG型（推理类）系列游戏。游戏者将扮演辩护律师，进行一系列的搜证和推理，并在法庭上与证人对峙，与罪犯周旋，从各种证词中找出案件的关键矛盾，透过抽丝剥茧地推理，最终找出真凶。由于其新颖的游戏方式和游戏带来的紧张刺激的投入感，受到了许多游戏玩家的好评。
+            </blockquote>
+
+            <p class="introduction">
+                系列前3代、“复苏的逆转”和第5、6代的主角都是律师成步堂龙一（成歩堂 龍一、なるほどう りゅういち）。第4代的主角则是王泥喜法介（王泥喜 法介、おどろき ほうすけ），第5、6代仍为玩家操作的对象。
+            <q>
+                游戏分为透过反复移动和对话收集法庭的情报和证据的“侦探部分”和利用收集的证据为武器为被告人辩护的“法庭部分”。在法庭上，自己手上的情报和证据会与检察方的证据不断会合、听取证人的证词、寻问出其中与事实不符的部分，即找出所谓的“矛盾”是这个游戏系统的原则。当矛盾被不断暴露后，事件的“真相”也就渐渐地明朗，最终的目的是为委托人的无罪立证。
+            </q>
+            </p>
+
+            <p class="teal bigfontsize">听取证人的证词，然后玩家（律师）进行“寻问”。寻问中可以直接对证词进行威慑（ゆさぶる），也可以提出能够证明证词与事实有矛盾的证物（つきつける）。在1代和‘复苏的逆转’中生命值有5点，选错部分关键选项或提交错误的证物会扣1点，失去全部点数则会获得有罪判决。2代以后改为血槽，根据迷题难易程度，扣血量会有所增减，一些重要迷题选错更会导致血槽大幅减少。1代中通过一段法庭部分血量就会全回复，2代以后同一天的法庭部分中不会回复血槽，而是在正确的解除游戏中角色的“心锁”后回复。血槽在6代中又改回如1代和‘复苏的逆转’中的5点生命值。
+            </p>
+            <p class="teal">《逆转检事》中不存在“法庭部分”，改为与事件关系者争论的“对决部分”，威慑、举证的方法一样。
+            </p>    
+
+            <p id="test1">
+                指证（つきつける）
+                <br>
+                玩家在证词中有矛盾的部分选择“指证”，再选择与之矛盾的证物。2代和3代中也可以选择人物文件。如果选择正确则故事继续，否则则会受到惩罚并要求重来一次。
+                <br><br>
+            </p>
+
+            <p class="test2">
+                威慑（ゆさぶる）
+                <br>
+                对证词选择“威慑”，就能追问出详细的情报。有时不使用“指证”仅用威慑也能推进剧情。威慑之后有时会追加新的证词，追问中动摇的证人有时也会作出矛盾的证词，一般来说威慑是不会被惩罚的，但有时也会惩罚，此时审判长会事先给予警告。
+                <br>
+            </p>
+
+            <p class="test2">
+                看穿（みぬく）
+                <br>
+                在4、5、6代中登场。对特定的证词选择手镯，看穿并指出证人撒谎时的“小动作”而推进剧情。看穿时，证人的语速会变得非常慢，更容易暴露出“小动作”。如果错过了，还可以再听一次。即使错误也不会被惩罚。
+                <br><br>
+            </p>
+
+            <p class="test3">
+                心理分析
+                <br>
+                5代及6代中登场。
+                <span>
+                    借由分析证人的证词在
+                    <span>
+                        情感上出现的矛盾，
+                    </span>
+                    以推论出正确的证词。
+                </span>
+                <br><br>
+            </p>
+
+            <p class="test4">
+                心理分析
+                <br>
+                5代及6代中登场。
+                <span>
+                    借由分析证人的证词在
+                    <span>
+                        情感上出现的矛盾，
+                    </span>
+                    以推论出正确的证词。
+                </span>
+                <br><br>
+            </p>
+
+            <p class="test?">
+                心理分析
+                <br>
+                5代及6代中登场。
+                <span>
+                    借由分析证人的证词在
+                    <span>
+                        情感上
+                    </span>
+                    <span>
+                        出现的
+                    </span>
+                    <span>
+                        矛盾，
+                    </span>
+                    以推论出正确的证词。
+                </span>
+                <br><br>
+
+            <p class="test5">
+                御魂神界（御魂の託宣（みたまのたくせん））
+                <br>
+            </p>
+            <span>6代中登场，借由姬巫女所跳之“奉纳舞”， </span>
+            <span>能够看见死者死前最后的记忆，并透过姬巫女进行主观的解释。 </span>
+            <span>律师需透过死者最后感受的五感以及物件去修正姬巫女的解释，引导出最正确的记忆。 </span>
+            </span>过程中姬巫女能够透过磨砺死者的五感，去进一步感受更确实的记忆，如此修正模糊的感官。 </span>
+            <br><br>
+            <!--如果用+，就只有第一个span变成棕色-->
+
+            <p class="test6">
+                御魂神界（御魂の託宣（みたまのたくせん））
+                <br>
+            </p>
+            <span>6代中登场，借由姬巫女所跳之“奉纳舞”， </span>
+            <div></div> <!--隔断测试，发现并不影响-->
+            <span>能够看见死者死前最后的记忆，并透过姬巫女进行主观的解释。 </span>
+            <span>律师需透过死者最后感受的五感以及物件去修正姬巫女的解释，引导出最正确的记忆。 </span>
+            <span>过程中姬巫女能够透过磨砺死者的五感，去进一步感受更确实的记忆，如此修正模糊的感官。 </span>
+            <br><br>
+
+            <!--blockquote长引用，是块文件-->
+            <!--q短引用，是行内文件-->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA5FBMVEX////3srJtRWj/hGH06MuWqbeAuab/yE3z58j79+7/gVyQpLPf5Oj/fFb85+f/x0fVzdT5x8eag5f3rq5jNV7/qJP37tm0wct4taH/14dpPmP/7c+mzL//xT/a6eT/29L98vP/9+dgMFr62Nn/mHv/ylmXxrbFztepj6N1UXLq6Oz/6eH/57Hs9fOv2Mb49feLbIb/wbL/56nLwsv6v7/6ysj/r57/0Gyx1MmjtcHCtL///fdbJlX/2Y/V2+H+7e3F4tWtmar/0sf/7cH/q5b/3Zr/13z/c0f/wjKFYn9VG0/k3eOvez9dAAACdklEQVR4nO3VW08aURSG4aXMDIIgWg5FCghYxQ6O4wlPo0WrVVv////pXmtvjelFb02T97l/s+YLyUYEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8oA2zVpy11ZHcbKp9GXeMXPTVhXz/bOTqk0kXPhwtrGvPxtZt3ovvKpl1/Vvx3ff8zro72bZuLj98KPfW3VQq4eDQh1nqwyz3B9dlbuG2PPgvLY4t/BkOjuXWh3Jr3VTWfShLqrk9+lp16m3ZaTiDTemsRFG0Ekm/myRJd1emq3Ecr8ay1+o539K1poWj2ZOFW52yhfuiXbQyzhILDyS2cJofatc6lFMNm6dyVNewKscDDcvjig9lqF3SHda0i1dr6bWGk5MQzqVkB8+KRw0H5xLZl7rfwg4mcmEHL+VqomHv3cJSqVR1C8tOwy2MjPT1XhIWxm5hb9lxC5fCwrrrSrpQvV+YhIXx60LX9Q5lw0K3UA+WSm6hhjt/LUyGtTgsnOjBllu4FBaqqlvY0C89D18aFiZhYewWtjRcZiEL/4OFTeMW1lVbygPn+dG9NCqS3a7ShUb2Ji1n2b00xr002j1tdRoWuoVGXxp1IL6b5r80nOhLo9xCC+ty/Kxhwy00bqFxL42ppb/14PVJCOdSte7BvTRKXxqlC41bqC7zq2sNW7JmRrJlZvLFdKSoGBl6ktaMvKybfORDKXw4Knw4Ft8VIczEd5n47kUW1i1k5kMZ+7B4PZiFMPdhnvswfQtfv7Tjw3DwLZQsfGnqw4/+OwYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4F/+AJNcfSb6clwZAAAAAElFTkSuQmCC" alt="分割线">
+            <ul class="Ace">
+                <span>淡漠SAMA</span>
+                <li>神乃木庄龙</li>
+                <li>成步堂龙一</li>
+                <li>御剑怜侍</li>
+            </ul>
+            <!--ul表示无序列表，在三种列表中使用最多；ol为有序，dl是定义列表-->
+            <dl>
+                <dt>逆转裁判的女性角色：</dt>
+                <dd>绫里千寻</dd>
+                <dd>绫里真宵</dd>
+            </dl>
+            <!--这是一个定义列表的演示-->
+            <p>动漫类型：</p>
+            <ul>
+                <li>日漫
+                    <ul>
+                        <li>《凉宫春日的忧郁》</li>
+                        <li>《轻音少女》</li>
+                        <li>《钢之炼金术师FA》</li>
+                    </ul>
+                </li>
+                <li>国漫
+                    <ul>
+                        <li>《狐妖小红娘》</li>
+                        <li>《秦时明月》</li>
+                    </ul>
+            <!--嵌套列表的演示-->
+                </li>
+            </ul>
+        <br>
+        <br>
+        <a href="https://www.bilibili.com/video/BV1XJ411X7Ud?p=26" >尚硅谷视频教程</a>
+        <br>
+        <br>
+
+        <img src="./picture/神千1.jpg" alt="神千，神乃木庄龙" width=300>
+        <!--只输入宽度和高度，可以对图片等比例缩放-->
+
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <img src="https://vignette.wikia.nocookie.net/aceattorney/images/3/38/Godot_Portrait.png/revision/latest/scale-to-width-down/310?cb=20190809093038&path-prefix=zh" alt="戈多" width=220>
+        <!--从网站上找图片，对图片右键，并复制图片地址-->
+        <!--https://aceattorney.fandom.com/zh/wiki/%E6%88%88%E5%A4%9A 这是该图片出现的网站-->
+        </body>
+        <br>
+        <br>
+        <br>
+        <iframe src="https://aceattorney.fandom.com/zh/wiki/%E6%88%88%E5%A4%9A" frameborder="0" width=1000 height=600></iframe>
+        <!--内联框架的使用-->
+        <br>
+        <br>
+        <br>
+
+        <!--在视频网站的“分享”处复制“嵌入代码”-->
+        <!--<iframe src="//player.bilibili.com/player.html?aid=882563456&bvid=BV1aK4y1C7Tx&cid=169418075&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=1000 height=600> </iframe>  这条代码先注释掉了-->
+        <!--不知道为什么，直接打开html的时候，bilibili的这个视频总是无法正常加载，报错信息是“文件可能被移至别处或删除”，必须用liveserver打开-->
+        <br>
+        <br>
+        <!--进入CSS部分-->
+        <p style="color: red;font-size: 40px;" >CSS初探</p>
+        <!--引入CSS的方法一——内联样式。开发时不要使用，因为样式只能对一个标签生效-->
+        <br>
+        <br>
+
+        <a href="http://wap.cac.gov.cn/" class="href1">(请不要点击，以正确显示颜色)</a>
+        <br><br>
+        <a href="https://fishc.com.cn/forum.php" class="href2">鱼C论坛</a>
+        <br><br>
+        <a href="https://www.baidu.com/" class="href3">baidubaidubaidubaidubaidubaidubaidubaidubaidu</a>(hover效果：鼠标移上去会变色）
+        <br><br>
+        <a href="https://www.jd.com/?country=China" class="href4">JDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJDJD</a>（active效果：鼠标点了不松手会变色）
+        <br>
+        <br>
+        <br>
+        <p class="test7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab tempora ea esse repellat accusamus doloremque optio unde, aperiam, dignissimos voluptatem, architecto est quibusdam vitae odit delectus nam quaerat. Ad, amet? (before和after的效果)</p>
+        <!--伪元素-->
+        
+        
+    </html>
+    

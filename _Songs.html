@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs</title>
+</head>
+<body>
+      <!--引用音频的第一种方法，不太推荐-->
+      <p>One more step</p>
+      <audio src="./audio/Axero&Alex Hackett-One More Step.mp3" controls loop></audio>
+      <br>
+      <br>
+      <br>
+      <!--第二种方法-->
+      <p>Natural</p>
+      <audio controls>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero-Natural(Original Mix).mp3">
+          <embed src="./audio/Axero-Natural(Original Mix).mp3" type="audio/mp3"><!--type是文件类型-->    
+          <!--浏览器会一条一条读取，如果浏览器不支持mp3，就会采用ogg的音频格式（此处我没有.ogg的文件，所以没写这段代码）。如果不支持audio，会读取embed，如果都不可以，就会提示汉字信息-->
+          <!--我认为，只写audio src其实是没问题的，现在绝大浏览器支持audio，并且支持mp3-->
+      </audio>
+      <br>
+      <br>
+      <br>
+      <p>Itro-Move</p>
+      <audio controls>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero&Itro-Move.mp3">
+      </audio>
+      <br>
+      <br>
+      <br>
+      <p>Axero-Waves</p>
+      <audio controls>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero-Waves.mp3">
+      </audio>
+      <br>
+      <br>
+      <br>
+      <p>Axero-Struggle</p>
+      <audio controls>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero-Struggle.mp3">
+      </audio>
+      <p>Rivers</p>
+      <audio controls>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero-River(Original Mix).mp3">
+      </audio>
+      <br>
+      <br>
+      <br>
+      <p>Axero-Trip</p>
+      <audio controls loop>
+          对不起，您的浏览器不支持播放音频！请更新浏览器的版本！
+          <source src="./audio/Axero-Trip.mp3">
+      </audio>
+      <br>
+      <br>
+      <br>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .wrapper{
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .img{
+            position: absolute;
+        }
+        a:nth-child(8){
+            z-index: 1;
+        }
+        .nav{
+            position: absolute;
+            z-index: 9999;
+            bottom: 20px;
+            left: 40px;
+        }
+        .nav a{
+            float:left;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            margin: 0 2px;
+            background-clip: content-box;
+            border: 2px solid transparent;
+            /*删了float，留下的长条是border的效果*/
+        }
+        .nav a:hover{
+            background-color: #fff;
+            border: 2px solid  rgba(255, 255, 255, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="img">
+            <a href="#">
+                <img src="./picture/1.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/2.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/3.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/4.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/5.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/6.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/7.jpg" alt="">
+            </a>
+        </div>
+        <div class="img">
+            <a href="#">
+                <img src="./picture/8.jpg" alt="">
+            </a>
+
+        <div class="nav">
+            <!--意思是导航-->
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </div>
+</body>
+</html>

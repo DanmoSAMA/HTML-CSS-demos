@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东顶部导航</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.10.2-web/css/all.css">
+    <style>
+        body{
+            /* 设置字体 */
+            font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+        a,span,.shortcut .fas{
+            color: #999;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrapper{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background-color: #E3E4E5;
+            border-bottom: 1px #ddd solid;
+        }
+        .content{
+            width: 1190px;
+            height: 30px;
+            margin: 0px auto;
+            position: relative;
+        }
+        .location{
+            float: left;
+        }
+        .city{
+            
+
+        }
+        .city:hover{
+            
+        }
+        .city-list{
+            display: none;
+            width: 320px;
+            height: 439px;
+            background-color: #fff;
+            border: 1px solid  rgb(204, 204, 204);
+            position: absolute;
+            top: 31px;
+            z-index: 999;
+            box-shadow: 0 2px 2px  rgba(0, 0, 0, .2);
+        }
+        .location:hover .city-list{
+            display: block;
+        }
+        .shortcut{
+            float: right;
+        }
+        .part,.line{
+            float: left;
+        }
+        .line{
+            width: 1px;
+            height: 10px;
+            margin: 10px 12px;
+            background-color: rgb(204, 202, 202);
+        }
+        .highlight,.location .fas{
+            color: #f10215;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="location">
+                <div class="city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#">北京</a>
+                </div>
+                <div class="city-list">
+
+                </div>
+            </div>
+            <div class="shortcut">
+                <div class="part">
+                    <a href="#">您好，请登录</a>
+                    <a href="#" class="highlight">免费注册</a>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <a href="#">我的订单</a>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <a href="#">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <a href="#">京东会员</a>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <a href="#" class="highlight">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <span>
+                        客户服务
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <span>
+                        网站导航
+                    </span>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="line"></div>
+                <div class="part">
+                    <span>
+                        手机京东
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

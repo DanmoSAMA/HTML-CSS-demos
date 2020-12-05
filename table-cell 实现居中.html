@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*box1是box2的父元素*/
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+
+            display: table-cell;
+            vertical-align: middle;
+            /*对父元素开启table-cell和vertical-align，实现垂直居中*/
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+            margin: 0 auto;
+            /*对子元素开启margin，实现水平居中*/
+
+            /*由于text-align是对字使用的，故对父元素开启text-align:center是无效的，还得用margin*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+        
+        </div>
+    </div>
+</body>
+</html>
